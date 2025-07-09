@@ -1,12 +1,19 @@
-import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core'
+import { Header } from './header/header';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [CommonModule,RouterOutlet,Header],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected title = 'Angular-Day-07';
+    number=24;
+    // onClicked=false;
+
+    // onClick(){
+    //     this.onClicked=true;
+    // }
 }
