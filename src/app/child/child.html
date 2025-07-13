@@ -1,0 +1,9 @@
+<div class="title">Child</div>
+<div class="app">
+<ng-content></ng-content></div>
+<hr>
+<div *ngFor="let number of numbers" class="text">
+    <ng-container *ngIf="number % 2 == 0">{{number}}</ng-container></div> 
+    <hr>
+<div class="text">
+<ng-template [ngIf]="true">This is Ng-Template Content</ng-template></div>

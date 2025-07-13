@@ -1,0 +1,7 @@
+<h2 class="section-title">CATEGORIES</h2>
+<div class="grid">
+  <div class="item" *ngFor="let category of categories">
+    <img [src]="category.img" />
+    <p>{{ category.name }}</p>
+  </div>
+</div>
