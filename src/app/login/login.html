@@ -1,0 +1,37 @@
+<div class="login-container">
+  <div class="login-box">
+    <div class="tabs">
+      <span [class.active]="isLoginMode" (click)="toggleMode('login')">Login</span>
+      <span>|</span>
+      <span [class.active]="!isLoginMode" (click)="toggleMode('register')">Register</span>
+    </div>
+
+    <!-- Login Form -->
+    <form *ngIf="isLoginMode" #loginForm="ngForm">
+      <label>Email</label>
+      <input type="email" [(ngModel)]="email" name="loginEmail" required />
+
+      <label>Password</label>
+      <input type="password" [(ngModel)]="password" name="loginPassword" required />
+
+      <button type="button" (click)="login()">Login</button>
+    </form>
+
+    <!-- Register Form -->
+    <form *ngIf="!isLoginMode" #registerForm="ngForm">
+      <label>Name</label>
+      <input type="text" [(ngModel)]="name" name="fullName" required />
+
+      <label>Email</label>
+      <input type="email" [(ngModel)]="email" name="registerEmail" required />
+
+      <label>Create Password</label>
+      <input type="password" [(ngModel)]="password" name="registerPassword" required />
+
+      <label>Confirm Password</label>
+      <input type="password" [(ngModel)]="confirmPassword" name="registerConfirmPassword" required />
+
+      <button type="button" (click)="register()">Register</button>
+    </form>
+  </div>
+</div>

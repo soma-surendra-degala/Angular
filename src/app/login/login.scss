@@ -1,0 +1,63 @@
+.login-container {
+  background-image: url('https://www.justahotels.com/wp-content/uploads/2023/09/Murudeshwar.jpg'); /* your image */
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-box {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 320px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  margin-bottom: 1rem;
+
+  span {
+    cursor: pointer;
+  }
+
+  .active {
+    color: black;
+  }
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+
+  label {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  input {
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+
+  button {
+    margin-top: 16px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #0056b3;
+    }
+  }
+}
