@@ -1,0 +1,32 @@
+<div>
+    <div class="text-center m-2">
+        <h1>LifeCycles-Hooks</h1>
+    </div>
+    <div class="text-center m-2 fw-bold">
+        <h2 class="mb-4">OnInit</h2>
+        <p>ngOnit:{{nameoftheHooks}}</p>
+        <p>Constructor:{{name}}</p>
+        <p>Check Console</p>
+    </div><hr>
+   <div class="text-center m-2 fw-bold">
+    <h2 class="mb-4">OnDestroy</h2>
+      <button class="btn btn-danger" (click)="stopCounter()">Stop Counter</button>
+
+    </div>
+    <hr>
+     <div class="text-center m-2 fw-bold">
+    <h2 class="mb-4">OnChanges</h2>
+    <div>
+        <input [(ngModel)]="change" type="text">
+    </div>
+    <h1>{{change}}</h1>
+
+    <hr>
+    <div class="text-center m-2 fw-bold">
+    <h2 class="mb-4">DoCheck</h2>
+    </div>
+    <hr>
+    
+
+
+</div>

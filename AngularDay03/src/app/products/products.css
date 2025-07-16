@@ -1,0 +1,13 @@
+
+.home{
+    margin: 10px;
+    background-color: #ce81db;
+    height: 100vh;
+    padding: 20px;
+}
+a {
+    font-size: 25px;
+    font-weight: bold;  
+    text-decoration: none;
+    color: white;
+}
