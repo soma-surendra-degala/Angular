@@ -1,0 +1,7 @@
+<div class="parent-container">
+<h1>Parent Component</h1>
+<input [(ngModel)]="parent"  type="text" class="my-5">
+<h2>{{parent}}</h2>
+<h2>{{receivedMessageFromChild}}</h2>
+</div>
+<app-child [child]="parent" (sendMessage)="receiveMessage($event)"></app-child>

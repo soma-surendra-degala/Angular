@@ -1,0 +1,124 @@
+<h1 class="text-center fw-bold">Sting Interpolution</h1>
+<div class="text-center fw-bold">
+<span> My Name is {{firstName}}</span></div><hr>
+<div class="text-center fw-bold">
+<h1>Property Binding</h1>
+<img [src]="image" alt="Virat" width="500" height="500"></div><hr>
+<div class="text-center fw-bold">
+<h1>Two Way Binding</h1>
+<input [(ngModel)]="defvalue"  type="text" placeholder="Enter Name"></div>
+
+<h1>{{defvalue}}</h1>
+<hr>
+<h1>Two Way Binding</h1>
+<div class="flexd">
+<input [(ngModel)]="code" type="text"  placeholder="Code to Disable">
+</div>
+<h1>{{code}}</h1>
+<div class="flexd">
+<button [disabled]="isBtnDisabled" (click)="checkForm()">Check Form</button>
+</div>
+<hr>
+
+<h1>Structural Directives</h1>
+<hr>
+<h2>ngIf</h2>
+<div class="d-flex justify-content-center px-5 m-5">
+  <button class="btn btn-success m-1" (click)="approve(true)">Accept</button>
+  <button class="btn btn-danger m-1" (click)="approve(false)">Reject</button>
+</div>
+<div >
+  <p *ngIf="isApproved" class="text-center fw-bold">
+    Your Application is Approved
+  </p>
+  <p *ngIf="!isApproved" class="text-center fw-bold" >
+    Soorrry,Your Application is Not Approved
+  </p>
+</div>
+<hr>
+<h2>ngFor</h2>
+<div class="m-5">
+<p *ngFor="let word of words;let i=index" class="text-center fw-bold">{{i}} - {{word}}</p></div>
+<hr>
+
+<h2>ngSwitch</h2>
+<div class="d-flex justify-content-center px-5 m-4">
+
+<input [(ngModel)]="luckyNumber" type="number" name="luckynumber" >
+
+</div>
+<div [ngSwitch]="luckyNumber" class="text-center fw-bold mb-5" >
+    <p *ngSwitchCase="1">Strong</p>
+    <p *ngSwitchCase="2">Weak</p>
+    <p *ngSwitchCase="3">Fool</p>
+    <p *ngSwitchCase="4">Brave</p>
+    <p *ngSwitchDefault>Number should be 1 to 4</p>
+    
+</div>
+<hr>
+<h1>Attributes Directives</h1>
+<hr>
+<h2>ngClass</h2>
+<div class="m-5">
+  <p [ngClass]="{
+    red:isHighlightColor === 'red',
+    'green':isHighlightColor ==='green',  
+    'blue':isHighlightColor==='blue'
+
+  }" class="text-center fw-bold"> Click any Button to Highlight.Me!</p>
+<div class="d-flex justify-content-center m-2 p-4">
+<button class="btn btn-danger m-2" (click)="highlight('red')">Red</button>
+<button class="btn btn-success m-2" (click)="highlight('green')">Green</button>
+<button class="btn btn-primary m-2" (click)="highlight('blue')">Blue</button>
+<button class="btn btn-dark m-2" (click)="highlight('white')">Remove</button>
+</div>
+</div>
+
+<hr>
+
+<h2>ngStyle</h2>
+
+<div class="m-4">
+  <p [ngStyle]="{
+    color : isToggleStyle === true ? 'white':'black',
+      'background-color': isToggleStyle ?'red':'white'
+  }" class="text-center fw-bold">Click the button to toggle the style!</p>
+  <div class="d-flex justify-content-center ">
+    <button class="btn btn-success" (click)="toggleStyle()">Toggle Style</button>
+  </div>
+</div>
+<hr> 
+
+<h1 class="m-5">Task</h1>
+<div class="container m-5">
+<div class="row">
+  <div class="col-md-6">
+  <div class="m-4 d-flex justify-content-center">
+<button [ngClass]="{'active-btn': chosenNum === 2}" class="btn btn-success" (click)="divisibleby(2)">Numbers divisible by 2</button></div>
+<div class=" m-4 d-flex justify-content-center">
+<button [ngClass]="{'active-btn': chosenNum === 3}" class="btn btn-success"(click)="divisibleby(3)">Numbers divisible by 3</button></div>
+<div class=" m-4 d-flex justify-content-center">
+<button class="btn btn-success" (click)="divisibleby(5)">Numbers divisible by 5</button></div>
+<div [ngClass]="{'active-btn': chosenNum === 5}" class=" m-4 d-flex justify-content-center">
+<button class="btn btn-success" (click)="divisibleby(10)">Numbers divisible by 10</button></div>
+<div [ngClass]="{'active-btn': chosenNum === 10}" class=" m-4 d-flex justify-content-center">
+<button  class="btn btn-danger" [disabled]="isClearDisabled" (click)="divisibleby(1)">Clear</button>
+</div>
+</div>
+<div class="col-md-1 vertical-hr "></div>
+<div class="col-md-5">
+  <div class="grid-container">
+  <p *ngFor="let number of numbers"  [ngClass]="{
+          highlight: number % chosenNum === 0 && chosenNum > 1
+        }"
+        [ngStyle]="{'font-size': (number % chosenNum === 0 && chosenNum > 1) ? '25px' : '20px',
+        'background-color':(number % chosenNum === 0 && chosenNum > 1)?'blue':'white'}"class="grid-item">{{number}}</p></div>
+</div>
+
+</div>
+</div>
+
+<app-parent></app-parent>
+
+
+
