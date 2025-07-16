@@ -1,0 +1,23 @@
+<div class="my-container">
+  <div class="btn-container">
+    <button class="btn btn-danger m-4" (click)="refresh()">Refresh</button>
+  </div>
+
+  <div class="item-container">
+    <div *ngIf="users?.length">
+      <div class="item" *ngFor="let user of users; trackBy: trackByUserId">
+        {{ user.name }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast-container" *ngIf="showToast">
+  <span class="closeBtn" (click)="closeToast()">X</span>
+  <div class="toast-content">
+    <span class="icon">✔️</span>
+    <span class="message">Welcome to the Angular Application!</span>
+  </div>
+</div>
+
+<router-outlet></router-outlet>
