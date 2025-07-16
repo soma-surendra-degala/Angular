@@ -1,0 +1,17 @@
+<!-- <h1>{{count}}</h1>
+<button (click)="increment()">Increment</button> -->
+<div class="container my-5 rounded">
+    <div class="root card">
+    <div class="d-flex justify-content-between align-items-center p-3">
+            <h2>Root</h2>
+            <button (click)="onclick()" class="btn btn-dark">Click</button>
+        </div>
+
+        <div class="d-flex justify-content-around align-items-center gap-5 p-3">
+            <app-parent-one></app-parent-one>
+            <app-parent-two></app-parent-two>
+
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
