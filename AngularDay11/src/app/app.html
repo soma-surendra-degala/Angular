@@ -1,0 +1,40 @@
+<!-- Dark Mode & Light Mode -->
+<!-- <app-navbar></app-navbar>
+<div class="main-container">
+  <app-categories></app-categories>
+  <app-offers></app-offers>
+</div> -->
+
+<!-- //--ng-content--,--ng-container--,--ng-template-- -->
+<!-- <app-child>
+  <h1>Hi This is Surendra</h1>
+  <h2>Loser</h2>
+</app-child> -->
+
+<!-- Custom Validater -->
+ <div class="form-container">
+  <form [formGroup]="myForm" (submit)="addComments()">
+    <div class="form-group">
+      <label for="comments">Comment:</label>
+      <input
+        class="form-control"
+        formControlName="comment"
+        placeholder="Your comment"
+      />
+      <div class="btn-container">
+        <button class="btn btn-info">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<div class="comments-container" *ngIf="comments.length > 0">
+  <div class="comment" *ngFor="let comment of comments">
+    {{ comment }}
+  </div>
+</div>
+
+<div class="comments-container" *ngIf="comments.length === 0">
+  <div class="no-comments">No comments yet</div>
+</div>
+

@@ -1,0 +1,21 @@
+.title{
+    font-size: 40px;
+    font-weight: 400;
+    margin: 30px;
+    color: #A0C13E;
+    line-height: 48px;
+}
+.app {
+    display: block;
+    margin: 20px;
+    padding: 10px;
+    color: #A0C13E;
+}
+.text {
+    font-size: 20px;
+    color: #A0C13E;
+    margin: 10px;
+}
+span {
+    color: red;
+}
