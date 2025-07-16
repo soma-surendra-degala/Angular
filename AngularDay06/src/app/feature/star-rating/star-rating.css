@@ -1,0 +1,17 @@
+
+ .heart {
+  display: inline-block;
+  color: lightgray;
+  position: relative;
+  font-size: 30px;
+}
+.heart.full {
+  color: red;
+}
+.heart .half {
+  position: absolute;
+  overflow: hidden;
+  left: 0;
+  top: 0;
+  color: red;
+}
