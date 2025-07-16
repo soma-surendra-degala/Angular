@@ -1,0 +1,58 @@
+<h2 class="text-center my-4 fw-bold">Angular API Call</h2>
+<hr>
+<div class=" row justify-content-center">
+  <div *ngFor="let user of users" class="border border-warning p-3 m-2" style="max-width: 400px; margin: auto">
+    <div class="d-flex align-items-center gap-5">
+      <img
+        [src]="user.avatar_url"
+        alt="APJ Abdul Kalam"
+        class="rounded-circle"
+        width="80"
+        height="80"
+      />
+
+      <div>
+        <h5 class="fw-bold mb-2">{{user.login}}</h5>
+        <button class="btn btn-warning text-white fw-semibold px-3"
+                (click)="goToGithub(user.html_url)">
+          Open Github
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<hr>
+<br>
+<h1 class="text-center">Pipes</h1><br><hr>
+<div class="text-center">
+  <h3>Currency Pipe</h3>
+  <div>Amount:{{ amount | currency}}</div>
+  <div>Amount:{{ amount | currency:'INR'}}</div>
+  <div>Amount:{{ amount | currency:"EUR"}}</div>
+</div>
+<hr>
+<div class="text-center">
+  <h3>Case Pipe</h3>
+  <div>Please Join in my {{ channelName | lowercase}}</div>
+  <div>Please Join in my {{ channelName | uppercase}}</div>
+  <div>Please Join in my {{ channelName | titlecase}}</div>
+</div>
+<hr>
+<div class="text-center">
+  <h3>Percent Pipe</h3>
+  <div>Mark :{{ mark | percent }}</div>
+</div>
+<hr>
+<div class="text-center">
+  <h3>Date Pipe</h3>
+  <div>Todays Date :{{ today }}</div>
+  <div>Todays Date :{{ today | date}}</div>
+
+</div>
+<hr>
+<div class="text-center">
+  <h3>Custom Pipe</h3>
+  <div>{{ name | new }}</div>
+</div>
+ 
