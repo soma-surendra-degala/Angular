@@ -1,0 +1,16 @@
+<div class="upload-wrapper">
+  <div class="upload-card">
+    <label for="imageName">Image name</label>
+    <input type="text" id="imageName" [(ngModel)]="imageName" />
+
+    <label for="fileInput" class="drop-area">
+      Add a photo
+      <input type="file" id="fileInput" (change)="onFileSelected($event)" hidden />
+    </label>
+
+    <button (click)="uploadImage()">Upload</button>
+
+  </div>
+  <div class="home"(click)='home()'>Home</div>
+  <div class="home"(click)='login()'>Login</div>
+</div>
