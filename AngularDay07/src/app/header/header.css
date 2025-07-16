@@ -1,0 +1,21 @@
+.header-container{
+    background-color: #FEDEFD;
+    padding: 15px;
+}
+.header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: large;
+    font-weight: bold;
+    color: #732F73;
+}
+.btns{
+    display: flex;
+    justify-content: end;
+    
+}
+.btn{
+    background-color: #732F73;
+    color: white;
+}
