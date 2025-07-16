@@ -1,0 +1,25 @@
+<div class="home">
+    <span class="text">
+        Line Chart
+    </span>
+<div class="main">
+    <div class="box">
+                   <!-- line.component.html -->
+            <apx-chart
+              [series]="chartSeries"
+              [chart]="chartDetails"
+              [xaxis]="xAxis"
+              [stroke]="stroke"
+              [dataLabels]="dataLabels">
+            </apx-chart>
+    </div>
+</div>
+<div class="container">
+<div class="chart-container">
+    <div class="chart" (click)="goToLine()"><i class="fas fa-chart-line"></i> Line</div>
+    <div class="chart" (click)="goToBar()"><i class="fas fa-chart-bar"></i> Bar</div>
+    <div class="chart" (click)="goToPie()"><i class="fas fa-chart-pie"></i> Pie</div>
+    <div class="chart" (click)="goToDough()"><i class="fas fa-chart-area"></i> Doughnut</div>
+</div>
+</div>
+</div>
