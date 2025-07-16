@@ -1,0 +1,30 @@
+h2 {
+  color: #2c3e50;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+  margin: 10px 0;
+}
+
+/* Optional: Add animation for status */
+p {
+  transition: color 0.3s ease;
+}
+
+.status-loading {
+  color: orange;
+}
+
+.status-online {
+  color: green;
+}
+
+.status-error {
+  color: red;
+}
+        
