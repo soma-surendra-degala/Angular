@@ -1,0 +1,10 @@
+<!-- app.component.html -->
+<div class="spinner-overlay" *ngIf="loading">
+  <div class="loader"></div>
+  <div class="facts">
+    {{fact}}
+  </div>
+</div>
+
+<!-- Main App content -->
+<router-outlet *ngIf="!loading"></router-outlet>

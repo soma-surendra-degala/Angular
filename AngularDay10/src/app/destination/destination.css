@@ -1,0 +1,19 @@
+
+
+.main{
+    margin: 0%;
+    padding: 0%;
+    width: 100%;
+    height: 95vh;
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+    background-color: #222222;
+   
+
+}
+.text{
+    font-size: 30px;
+    font-weight: bold;
+    color: #e77613;
+}
